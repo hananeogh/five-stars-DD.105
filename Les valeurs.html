@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Valeurs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container-fluid {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+            max-width: 800px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .form-control:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+        .btn {
+            background: #007BFF;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Responsive table */
+        .table-responsive {
+            overflow-x: auto;
+        }
+        /* Mobile adjustments */
+        @media (max-width: 576px) {
+            .form-control {
+                font-size: 14px;
+            }
+            h1, h2 {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">Les Valeurs</h1>
+        <form>
+            <div class="mb-3">
+                <label class="form-label"><h2>Réflexion individuelle : Quelles sont vos 5 valeurs clés avec lesquelles vous vivez au quotidien ? Notez ces valeurs sur votre cahier</h2></label>
+                <div class="row">
+                    <div class="col-md-12 mb-2"><input type="text" class="form-control" placeholder="Valeur 1"></div>
+                    <div class="col-md-12 mb-2"><input type="text" class="form-control" placeholder="Valeur 2"></div>
+                    <div class="col-md-12 mb-2"><input type="text" class="form-control" placeholder="Valeur 3"></div>
+                    <div class="col-md-12 mb-2"><input type="text" class="form-control" placeholder="Valeur 4"></div>
+                    <div class="col-md-12 mb-2"><input type="text" class="form-control" placeholder="Valeur 5"></div>
+                </div>
+            </div>
+            
+            <h2>Demandez à vos collègues de faire une liste des 5 valeurs qui vous caractérisent</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Valeur</th>
+                            <th>Exemple d'action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Valeur 1"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Valeur 2"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Valeur 3"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Valeur 4"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Valeur 5"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2>Débrief collectif en groupe sur les écarts ou les similarités que vous avez trouvé</h2>
+            <textarea class="form-control" rows="4" placeholder="Écrivez vos réflexions personnelles sur les écarts constatés et les actions à faire dans les cas d'écart..."></textarea>
+            
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

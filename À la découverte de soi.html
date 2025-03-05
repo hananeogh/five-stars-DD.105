@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Interactif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container-fluid {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+            max-width: 800px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .form-control:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+        .btn {
+            background: #007BFF;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Responsive table */
+        .table-responsive {
+            overflow-x: auto;
+        }
+        /* Mobile adjustments */
+        @media (max-width: 576px) {
+            .form-control {
+                font-size: 14px;
+            }
+            h1, h2 {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">À la découverte de soi</h1>
+        <form>
+            <div class="mb-3">
+                <label class="form-label"><h2>1. Chacun écrit sur son cahier les 3 mots (tags) que vous voulez que les gens retiennent de vous :</h2></label>
+                <div class="row">
+                    <div class="col-md-4 mb-2"><input type="text" class="form-control" placeholder="Mot-clé 1"></div>
+                    <div class="col-md-4 mb-2"><input type="text" class="form-control" placeholder="Mot-clé 2"></div>
+                    <div class="col-md-4 mb-2"><input type="text" class="form-control" placeholder="Mot-clé 3"></div>
+                </div>
+            </div>
+            
+            <h2>2. Quelles sont les actions du quotidien que vous faites aujourd’hui qui vous permettent de justifier cela ?</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Mon Tag (reprenez les 3 mots que vous venez d’indiquer)</th>
+                            <th>Donnez un exemple d’une action que vous faites au quotidien qui prouve votre tag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Tag 1"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Tag 2"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="Tag 3"></td>
+                            <td><input type="text" class="form-control" placeholder="Exemple d'action"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2>3. Êtes-vous une personne de confiance ?</h2>
+            <textarea class="form-control" rows="4" placeholder="Expliquez pourquoi..."></textarea>
+            <h2>4. Quels sont les mots qu’ont écrit vos collègues ?</h2>
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 1"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 2"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 3"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 4"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 5"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 6"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 7"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 8"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 9"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 10"></li>
+                <li class="list-group-item"><input type="text" class="form-control" placeholder="Mot 11"></li>
+            </ul>
+            
+            <h2>Quels sont les points communs ? Les différences ?</h2>
+            <textarea class="form-control" rows="4" placeholder="Analyse des similitudes et différences..."></textarea>
+            <h2>Comment construire votre réputation autour des mots clés que vous voulez ? même si vous n’êtes pas encore aujourd’hui ce que vous voulez
+                devenir?</h2>
+            <textarea class="form-control" rows="4" placeholder="Expliquez pourquoi..."></textarea>
+            <h2>Que signifie “être exemplaire” ?</h2>
+            <textarea class="form-control" rows="4" placeholder="Expliquez pourquoi..."></textarea>
+            <h2>Comment pouvez-vous devenir exemplaire ?</h2>
+            <textarea class="form-control" rows="4" placeholder="Expliquez pourquoi..."></textarea>
+            <h2>Que devez vous apprendre pour devenir exemplaire ?</h2>
+            <textarea class="form-control" rows="4" placeholder="Expliquez pourquoi..."></textarea>
+            <div class="text-center mt-3">
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
